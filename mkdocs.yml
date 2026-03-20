@@ -1,0 +1,72 @@
+# TagAI 文档站点（MkDocs Material）
+# 部署到 GitHub Pages 后，请将 site_url 改为：https://<你的用户名或组织>.github.io/<仓库名>/
+site_name: TagAI 文档
+site_description: TagAI 产品与社交预测市场说明
+site_url: https://tagai-dao.github.io/TagAI-doc/
+
+repo_url: https://github.com/tagai-dao/TagAI-doc
+edit_uri: edit/main/docs/
+
+# 首页正文文件仅被 index.md 引用，不出现在侧栏（避免与根路径重复）
+not_in_nav: |
+  TagAI是什么.md
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 深色模式
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 浅色模式
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["docs"]
+  - md_in_html
+
+nav:
+  - TagAI 是什么: index.md
+  - 开始使用:
+      - 登录与钱包创建: 开始使用/登录与钱包创建.md
+      - 进行你的第一次交易: 开始使用/进行你的第一次交易.md
+      - 如何存款？: 开始使用/如何存款.md
+  - 创建预测市场与提供流动性:
+      - 创建社交预测: 创建预测市场与提供流动性/创建社交预测.md
+      - 做市商如何提供流动性: 创建预测市场与提供流动性/做市商如何提供流动性.md
+  - 市场与交易:
+      - 价格如何计算？: 市场与交易/价格如何计算.md
+      - 市场如何形成？: 市场与交易/市场如何形成.md
+  - 预测什么及结果结算:
+      - 预测什么？: 预测什么及结果结算/预测什么.md
+      - 结果结算与兑换: 预测什么及结果结算/结果结算与兑换.md
+  - 社交预测市场:
+      - 背景: 社交预测市场/背景.md
+      - 社区驱动的预测市场: 社交预测市场/社区驱动的预测市场.md
+      - 社交预言机:
+          - 概览: 社交预测市场/社交预言机.md
+          - 兼容 web2 的 web3 社交账户: 社交预测市场/社交预言机/兼容web2的web3社交账户.md
+          - 社交预言机同步社交数据: 社交预测市场/社交预言机/社交预言机同步社交数据.md
+      - 基于社区共识的事件结算: 社交预测市场/基于社区共识的事件结算.md
+  - 社交分发与 Web2 采用:
+      - 社交分发与 web2 采用: 社交分发与Web2采用/社交分发与web2采用.md
+      - 操作指南 | 社交分发及交易: 社交分发与Web2采用/操作指南-社交分发及交易.md
+      - 开通 Web3 社交账户: 社交分发与Web2采用/操作指南-社交分发及交易/开通Web3社交账户.md
+      - 创作与质押式策展: 社交分发与Web2采用/操作指南-社交分发及交易/创作与质押式策展.md
+      - 申领奖励与交易代币: 社交分发与Web2采用/操作指南-社交分发及交易/申领奖励与交易代币.md
+      - TagAI 私钥导入其他钱包（OKX 钱包为例）指南: 社交分发与Web2采用/操作指南-社交分发及交易/TagAI私钥导入其他钱包（OKX钱包为例）指南.md
+  - 联系我们:
+      - BNB Chain: 联系我们/BNB链.md
+      - 联系我们: 联系我们/联系我们.md
