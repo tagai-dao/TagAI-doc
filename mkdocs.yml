@@ -1,8 +1,8 @@
 # TagAI 文档站点（MkDocs Material）
-# 部署到 GitHub Pages 后，请将 site_url 改为：https://<你的用户名或组织>.github.io/<仓库名>/
+# 自定义域名（与 gh-pages 上 CNAME、仓库 Pages 设置一致）
 site_name: TagAI 文档
 site_description: TagAI 产品与社交预测市场说明
-site_url: https://tagai-dao.github.io/TagAI-doc/
+site_url: https://doc.tagai.fun/
 
 repo_url: https://github.com/tagai-dao/TagAI-doc
 edit_uri: edit/main/docs/

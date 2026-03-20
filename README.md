@@ -30,7 +30,7 @@ python3 scripts/fetch_gitbook.py
    （首次推送前没有该分支：推送 `main` 后，工作流会创建 `gh-pages`。）
 3. 推送 `main` 会触发 [`.github/workflows/deploy-docs.yml`](.github/workflows/deploy-docs.yml)：安装依赖、`mkdocs build` 后将 `site/` 发布到 `gh-pages`。
 
-线上地址（与 `mkdocs.yml` 中 `site_url` 一致）：<https://tagai-dao.github.io/TagAI-doc/>
+线上地址（与 `mkdocs.yml` 中 `site_url` 一致）：<https://doc.tagai.fun/>
 
 若仓库名或组织变更，请同步修改 `mkdocs.yml` 里的 `site_url`、`repo_url`、`edit_uri`。
 

@@ -30,8 +30,10 @@ jobs:
       - name: Build site
         run: mkdocs build --strict
 
+      # cname：在 gh-pages 根目录写入 CNAME，GitHub Pages 才能稳定绑定自定义域名并签发 HTTPS 证书
       - name: Upload to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
+          cname: doc.tagai.fun
