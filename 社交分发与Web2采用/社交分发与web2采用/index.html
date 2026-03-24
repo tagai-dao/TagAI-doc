@@ -1627,33 +1627,33 @@
 <h4 id="_3">帖子奖励计算</h4>
 <p>任何创建了TagAI社交账户的用户都可以进行策展，在TagAI上点火可以选择消耗的VotingPower（以下简称VP）值，从1-10，也可以通过回复来进行策展，回复会消耗3个VP进行策展，额外的，如果一个用户对一个内容既点火策展，又回复策展，那么VP会有10%的加成。例如：用户点火策展了10VP，也回复了，那么用户的VP调整为13*1.1=14.3。</p>
 <p>每个策展动作的策展分数（Curate Score） 的计算公式是：</p>
-<p>$$
-scores_{curate}=CommunityCredit_{curator}*VP_{Curate}
-$$</p>
+<div class="arithmatex">\[
+scores_{curate} = CommunityCredit_{curator} \cdot VP_{Curate}
+\]</div>
 <p>策展会根据策展人当前剩余的VP值进行衰减，衰减公式为：</p>
-<p>$$
-attenuation=0.0000175*VP_{current}^2+0.3
-$$</p>
+<div class="arithmatex">\[
+attenuation = 0.0000175 \cdot VP_{current}^2 + 0.3
+\]</div>
 <p>调整后的策展分数为：</p>
-<p>$$
-scores_{curatei}=scores_{curate}*attenuation
-$$</p>
+<div class="arithmatex">\[
+scores_{curatei} = scores_{curate} \cdot attenuation
+\]</div>
 <p>帖子获得的策展分数（Curation Score）的计算公式是：</p>
-<p>$$
-scores_{content}=\sum^{N}<em>{i=1}scores</em>{curatei}
-$$</p>
+<div class="arithmatex">\[
+scores_{content} = \sum_{i=1}^{N} scores_{curatei}
+\]</div>
 <p>在一天的计算周期结束时，流入内容的社区代币与其获得的策展分的平方成正比。</p>
-<p>$$
-Reward_{contentj}=\frac{scores_{contentj}^2}{\sum^{N}<em>{i=1}scores</em>{contenti}^2}*Reward_{perday}
-$$</p>
+<div class="arithmatex">\[
+Reward_{contentj} = \frac{scores_{contentj}^2}{\sum_{i=1}^{N} scores_{contenti}^2} \cdot Reward_{perday}
+\]</div>
 <p>社区代币的社交分发在每个周期结束时计算。流入帖子奖励池的社区代币，创作者获得 25%，所有策展人分享 75%。</p>
 <h4 id="_4">策展人（🔥）奖励</h4>
 <p>帖子可能有多个策展人。每个策展人获得策展奖励的计算方式，由策展人的社区信用（credit）和对帖子策展的顺序决定。对同一内容策展越早，可以根据“头矿”收益乘数，获得更多奖励。</p>
 <p>计算策展人的“头矿”收益乘数的公式如下：</p>
-<p>$$
-scaler_{n} = \frac{1}{\sqrt{scores_{curate1}+scroes_{curate2}+....+\frac{scores_{curaten}}{2}}}
-$$</p>
-<p>同一个帖子的策展人所获得的奖励，依据以上计算的结果乘以策展人的策展权重（ $$scores_{curaten}*scaler_{n}$$），按比例分发给每一个策展人。</p>
+<div class="arithmatex">\[
+scaler_{n} = \frac{1}{\sqrt{scores_{curate1} + scores_{curate2} + \cdots + \frac{scores_{curaten}}{2}}}
+\]</div>
+<p>同一个帖子的策展人所获得的奖励，依据以上计算的结果乘以策展人的策展权重（<span class="arithmatex">\(scores_{curaten} \cdot scaler_{n}\)</span>），按比例分发给每一个策展人。</p>
 
 
 
@@ -1707,6 +1707,10 @@ $$</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

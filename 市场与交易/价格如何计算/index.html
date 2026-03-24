@@ -1528,17 +1528,17 @@
 <h4 id="_3">未来价格</h4>
 <p>TagAI 上的价格按照 FPMM 函数确定价格。FPMM 是一种基于「恒定乘积函数」的预测市场做市商，用不同结果的条件代币作为资产，通过 x₁ · x₂ · … · xₙ = k 来自动定价。</p>
 <p>对于一个有 <em>n</em> 个结果的预测市场：</p>
-<p>$$
-x_1<em>x_2</em>...*x_n=k
-$$</p>
+<div class="arithmatex">\[
+x\_1*x\_2*...\*x\_n=k
+\]</div>
 <ul>
 <li>x<sub>i</sub>：第 i 个结果代币（Outcome Token）的池子余额</li>
 <li>k：常数（交易前后保持不变）</li>
 </ul>
 <p>在 <strong>二元市场（YES / NO）</strong> 中，它就退化为：</p>
-<p>$$
-x _ {YES}*x_{NO}=k
-$$</p>
+<div class="arithmatex">\[
+x \_ {YES}\*x\_{NO}=k
+\]</div>
 <h4 id="_4">价格=概率</h4>
 <p>在 TagAI 的预测市场中，股票显示的价格即该事件发展的概率。</p>
 
@@ -1594,6 +1594,10 @@ $$</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
