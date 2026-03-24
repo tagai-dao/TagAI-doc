@@ -85,31 +85,31 @@ Twitter Space 奖励，则每周结算一次。Twitter Space 创建后，需发�
 每个策展动作的策展分数（Curate Score） 的计算公式是：
 
 $$
-scores\_{curate}=CommunityCredit\_{curator}\*VP\_{Curate}
+scores_{curate} = CommunityCredit_{curator} \cdot VP_{Curate}
 $$
 
 策展会根据策展人当前剩余的VP值进行衰减，衰减公式为：
 
 $$
-attenuation=0.0000175\*VP\_{current}^2+0.3
+attenuation = 0.0000175 \cdot VP_{current}^2 + 0.3
 $$
 
 调整后的策展分数为：
 
 $$
-scores\_{curatei}=scores\_{curate}\*attenuation
+scores_{curatei} = scores_{curate} \cdot attenuation
 $$
 
 帖子获得的策展分数（Curation Score）的计算公式是：
 
 $$
-scores\_{content}=\sum^{N}*{i=1}scores*{curatei}
+scores_{content} = \sum_{i=1}^{N} scores_{curatei}
 $$
 
 在一天的计算周期结束时，流入内容的社区代币与其获得的策展分的平方成正比。
 
 $$
-Reward\_{contentj}=\frac{scores\_{contentj}^2}{\sum^{N}*{i=1}scores*{contenti}^2}\*Reward\_{perday}
+Reward_{contentj} = \frac{scores_{contentj}^2}{\sum_{i=1}^{N} scores_{contenti}^2} \cdot Reward_{perday}
 $$
 
 社区代币的社交分发在每个周期结束时计算。流入帖子奖励池的社区代币，创作者获得 25%，所有策展人分享 75%。
@@ -121,7 +121,7 @@ $$
 计算策展人的“头矿”收益乘数的公式如下：
 
 $$
-scaler\_{n} = \frac{1}{\sqrt{scores\_{curate1}+scroes\_{curate2}+....+\frac{scores\_{curaten}}{2}}}
+scaler_{n} = \frac{1}{\sqrt{scores_{curate1} + scores_{curate2} + \cdots + \frac{scores_{curaten}}{2}}}
 $$
 
-同一个帖子的策展人所获得的奖励，依据以上计算的结果乘以策展人的策展权重（ $$scores\_{curaten}\*scaler\_{n}$$），按比例分发给每一个策展人。
+同一个帖子的策展人所获得的奖励，依据以上计算的结果乘以策展人的策展权重（$scores_{curaten} \cdot scaler_{n}$），按比例分发给每一个策展人。
