@@ -83,9 +83,9 @@ A社区的credit构成是：
 const ratios = [0.5, 0.3, 0.2]
 ```
 
-1. 获取社区成员的账号（在社区中进行过交互会自动加入社区）；
-2. 查询所有成员的： 代币余额/lp余额/Twitter声誉；
-3. 计算每一项每个成员的分数（比如社区代币余额）：
+- 获取社区成员的账号（在社区中进行过交互会自动加入社区）；
+- 查询所有成员的： 代币余额/lp余额/Twitter声誉；
+- 计算每一项每个成员的分数（比如社区代币余额）：
 
 $$
 totalscore = \sum_{i=1}^{N} userbalance_{i}
@@ -95,7 +95,7 @@ $$
 userscore_{i} = ratios[0] \cdot \frac{userbalance_{i} \cdot 1000000000 }{totalscore}
 $$
 
-4. 计算每个成员的credit分数：
+- 计算每个成员的credit分数：
 
 $$
 usercredit_{i} = \sum_{j=1}^{N} userscore_{i,j}
